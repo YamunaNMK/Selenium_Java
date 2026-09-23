@@ -1,21 +1,26 @@
 package java_Code;
 
+import java.util.Scanner;
+
 public class StringReverse {
 
 	public static void main(String[] args) {
-		String ip="Madam";
-		ip=ip.toLowerCase();
-		String rev="";
-		StringBuffer sb=new StringBuffer(ip);
 		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a name");
+		String input=sc.next();
+		input=input.toLowerCase();
+		String rev="";
+		StringBuffer sb=new StringBuffer(input);
+		rev=sb.reverse().toString();
 		System.out.println(sb.reverse());
 		
-		if(ip.equals(rev)) {
-			System.out.println("Given ip string is a Palindrome");
+		if(input.equals(rev)) {
+			System.out.println("Entered name is palindrome");
 		}
-		else {
+		else
 			System.out.println("Not a palindrome");
-		}
+		sc.close();
 
 	}
 
